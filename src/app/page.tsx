@@ -9,11 +9,11 @@ export default function Home() {
     <div className="bg-zinc-900 flex flex-col min-h-screen">
       <Navbar />
 
-      <section className="container border border-gray-200">
+      <section className="container mt-20">
         <Hero />
       </section>
 
-      <section className="container border border-gray-200">
+      <section className="container">
         <HomeProject />
       </section>
     </div>

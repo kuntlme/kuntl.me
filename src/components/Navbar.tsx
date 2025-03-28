@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="py-8 px-[35rem] w-full text-md font-semibold text-white flex justify-between items-center border border-gray-600">
+    <div className="fixed py-8 px-[35rem] w-full bg-zinc-900 text-md font-semibold text-white flex justify-between items-center z-50">
       <div>logo</div>
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-6 border border-stone-700 rounded-4xl px-6 py-1">
