@@ -14,8 +14,6 @@ const HomeProject = () => {
         </div>
         <div className='flex justify-center items-center gap-2 text-zinc-300 my-10'>
             <p className='text-gray-100 text-sm font-medium flex items-center cursor-pointer'>See more <ArrowRight size={16} className='ml-1'/></p>
-            
-            
         </div>
     </div>
   )

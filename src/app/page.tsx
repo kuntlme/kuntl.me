@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
+import HomeAbout from "@/components/homeAbout";
 import HomeProject from "@/components/homeproject";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,6 +11,14 @@ export default function Home() {
 
       <section className="container mt-20">
         <Hero />
+      </section>
+
+      <section className="container">
+        <HomeAbout />
+      </section>
+
+      <section className="container">
+        <HomeProject />
       </section>
 
       <section className="container">
