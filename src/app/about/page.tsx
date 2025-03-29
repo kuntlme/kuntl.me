@@ -7,7 +7,7 @@ const page = () => {
         <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
           About
         </h1>
-        <p className="text-gray-300 mb-7">
+        <p className="text-gray-300 mb-7 border-l-4 border-stone-700 pl-4">
           I am Kuntal, a passionate full-stack web developer with expertise in
           building scalable and efficient web applications. I specialize in
           front-end and back-end development, leveraging modern technologies to
@@ -21,8 +21,8 @@ const page = () => {
             <div className="flex flex-col mb-5 w-11/12">
               <h1 className="text-cyan-400 text-2xl font-bold">2025</h1>
               <p className="text-gray-300">
-                Expanding into DevOps and Web3, learning about CI/CD, Docker,
-                Kubernetes, and blockchain development.
+                Expanding into <strong>DevOps</strong> and <strong>Web3</strong>, learning about <strong>CI/CD</strong>, <strong> Docker</strong>,
+                <strong> Kubernetes</strong>, and <strong>blockchain development</strong>.
               </p>
             </div>
           </div>
@@ -32,9 +32,8 @@ const page = () => {
             <div className="flex flex-col mb-5 w-11/12">
               <h1 className="text-cyan-400 text-2xl font-bold">2024</h1>
               <p className="text-gray-300">
-                Worked on real-world projects, participated in hackathons, and
-                focused on Backend Development, Databases, and Cloud
-                Technologies.
+                Worked on <strong>real-world projects</strong>, participated in hackathons, and
+                focused on <strong>Backend Development</strong>, <strong>Databases</strong>, and <strong>Cloud Technologies</strong>.
               </p>
             </div>
           </div>
@@ -44,8 +43,8 @@ const page = () => {
             <div className="flex flex-col mb-5 w-11/12">
               <h1 className="text-cyan-400 text-2xl font-bold">2023</h1>
               <p className="text-gray-300">
-                Built foundational projects, explored Full-Stack Development
-                (MERN, Next.js), and deepened DSA skills.
+                Built foundational projects, explored <strong>Full-Stack Development </strong>
+                (MERN, Next.js), and deepened <strong>DSA</strong> skills.
               </p>
             </div>
           </div>
@@ -55,8 +54,7 @@ const page = () => {
             <div className="flex flex-col mb-1 w-11/12">
               <h1 className="text-cyan-400 text-2xl font-bold">2022</h1>
               <p className="text-gray-300">
-                Started learning Web Development with HTML, CSS, JS and Data Structures &
-                Algorithms (DSA) in C++.
+                Started learning <strong>Web Development</strong> with <strong>HTML, CSS, JS</strong> and <strong>Data Structures & Algorithms</strong> (DSA) in <strong>C++</strong>.
               </p>
             </div>
           </div>
