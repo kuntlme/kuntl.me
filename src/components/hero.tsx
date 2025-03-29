@@ -12,7 +12,7 @@ const Hero = () => {
         <br />
         <p className="text-md font-sans text-zinc-400 mb-2">Exploring new technologies and creating web experiences, while continuously learning and growing as a developer.</p>
         <hr className="border-zinc-700 w-1/2 "/>
-        <p className="text-md font-sans text-zinc-400 mt-2">Find me on <span className="text-cyan-400 font-semibold cursor-pointer">twitter</span> for tech updates and memes.</p>
+        <p className="text-md font-sans text-zinc-400 mt-2">Find me on <a href="https://x.com/Kuntlmajee" target="_blank"><span className="text-cyan-400 font-semibold cursor-pointer">twitter</span></a> for tech updates and memes.</p>
       </div>
       <div className="relative h-20 w-20 rounded-sm">
         <div className="absolute -bottom-2 -right-2 h-full w-full border-2 border-cyan-400"></div>

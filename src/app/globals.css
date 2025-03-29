@@ -4,3 +4,9 @@
 .container {
   @apply mx-auto max-w-2xl;
 }
+
+.text-outline {
+  -webkit-text-stroke: 4px var(--stroke-color);
+  text-stroke: 1px var(--stroke-color);
+  --stroke-color: oklch(0.37 0.013 285.805); /* zinc-700 */
+}

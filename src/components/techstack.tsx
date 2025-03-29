@@ -9,6 +9,7 @@ import {
   SiMongodb,
   SiPrisma,
   SiPostgresql,
+  SiTurborepo,
 } from "react-icons/si";
 
 const MarqueeStack = () => {
@@ -16,6 +17,7 @@ const MarqueeStack = () => {
     { icon: <SiTypescript className="h-6 w-6" />, name: "TypeScript" },
     { icon: <SiReact className="h-6 w-6" />, name: "React" },
     { icon: <SiNextdotjs className="h-6 w-6" />, name: "Next.js" },
+    { icon: <SiTurborepo className="h-6 w-6" />, name: "Turborepo" },
     { icon: <SiTailwindcss className="h-6 w-6" />, name: "Tailwind" },
     { icon: <SiNodedotjs className="h-6 w-6" />, name: "Node.js" },
     { icon: <SiMongodb className="h-6 w-6" />, name: "MongoDB" },
