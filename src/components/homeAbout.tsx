@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 const homeAbout = () => {
   return (
     <div>
-      <h1 className="text-4xl font-extrabold text-white mt-10 mb-5">About</h1>
+      <h1 className="text-4xl font-extrabold text-white mt-10 mb-5">About Me</h1>
       <div className="grid grid-cols-2 gap-4">
         <Techstack />
         <GithubInfo />
