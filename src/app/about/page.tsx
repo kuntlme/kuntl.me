@@ -8,18 +8,22 @@ const page = () => {
           About Me
         </h1>
         <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
-          I am Kuntal, a passionate full-stack web developer with expertise in
-          building scalable and efficient web applications. I specialize in
-          front-end and back-end development, leveraging modern technologies to
-          create seamless user experiences. With a strong foundation in web
-          frameworks, databases, and cloud integration, I strive to deliver
-          high-quality solutions that solve real-world problems.
+          👋 Hi there! I'm Kuntal, a passionate <strong>B.Tech</strong> student
+          in <strong>Computer Science and Engineering</strong> who loves{" "}
+          <strong>web development</strong>.
+        </p>
+        <br />
+        <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
+          I'm a Full Stack Engineer. I am 21 and learning{" "}
+          <strong>
+            TypeScript, Next.js, React.js, Node.js, and database management
+          </strong>
+          . Now, I have a passion for learning UI/UX.
         </p>
         <br />
         <p className="text-gray-300 mb-7 border-l-4 border-stone-700 pl-4">
-          I am pursuing a <strong>Bachelor of Technology</strong> (B.Tech) in{" "}
-          <strong>Computer Science and Engineering</strong>, focusing on
-          software development, algorithms, and system design.
+          I love using <strong>Next.js</strong> to create a website. Then use <strong>GitHub</strong> to host my
+          codebase. After that, I use <strong>Vercel</strong> to deploy my website.
         </p>
         <div className="flex flex-col">
           <div className="flex border-l-2 border-cyan-400 gap-1">
@@ -41,8 +45,8 @@ const page = () => {
               <h1 className="text-cyan-400 text-2xl font-bold">2024</h1>
               <p className="text-gray-300">
                 Worked on <strong>real-world projects</strong>, participated in
-                hackathons, and focused on <strong>Backend Development</strong>,{" "}
-                <strong>Databases</strong>, and{" "}
+                hackathons, and focused on <strong>Backend Development</strong> (Next.js, TypeScript),{" "}
+                <strong>Databases</strong> (MongoDB, PostgreSQL), and{" "}
                 <strong>Cloud Technologies</strong>.
               </p>
             </div>
@@ -55,7 +59,7 @@ const page = () => {
               <p className="text-gray-300">
                 Built foundational projects, explored{" "}
                 <strong>Full-Stack Development </strong>
-                (MERN, Next.js), and deepened <strong>DSA</strong> skills.
+                ( React.js, Express.js, Node.js, MongoDB ) and deepened <strong>DSA</strong> skills.
               </p>
             </div>
           </div>
