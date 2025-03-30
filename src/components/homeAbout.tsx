@@ -3,6 +3,7 @@ import { GithubStats } from "./githubStats";
 import GithubInfo from "./githubInfo";
 import Techstack from "./techstack";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 const homeAbout = () => {
   return (
     <div>
@@ -13,9 +14,11 @@ const homeAbout = () => {
         <GithubStats />
       </div>
       <div className="flex justify-center items-center gap-2 text-zinc-300 my-10">
+        <Link href="/about">
         <p className="text-gray-100 text-sm font-medium flex items-center cursor-pointer">
           See more <ArrowRight size={16} className="ml-1" />
         </p>
+        </Link>
       </div>
     </div>
   );
