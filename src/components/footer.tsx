@@ -25,7 +25,7 @@ const Footer = () => {
             @2025 <span className="text-gray-400">--- </span>he
             <span className="text-gray-400">/</span>him
           </p>
-          <a href="https://github.com/Kuntalmajee2557" target="_blank">
+          <a href="https://github.com/Kuntalmajee2557/kuntl.me" target="_blank">
             <p className="cursor-pointer flex justify-center items-center gap-1 border-zinc-700 underline underline-offset-2 decoration-2 decoration-gray-700">
               <Github size={16} className="cursor-pointer" />
               kuntal.dev
