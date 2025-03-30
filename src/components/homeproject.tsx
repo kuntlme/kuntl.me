@@ -14,7 +14,7 @@ const HomeProject = () => {
             <Card></Card>
         </div>
         <div className='flex justify-center items-center gap-2 text-zinc-300 my-10'>
-          <Link href="/projects">
+          <Link href="/project">
             <p className='text-gray-100 text-sm font-medium flex items-center cursor-pointer'>See more <ArrowRight size={16} className='ml-1'/></p>
           </Link>
         </div>
