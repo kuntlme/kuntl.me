@@ -8,13 +8,13 @@ const page = () => {
           About Me
         </h1>
         <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
-          👋 Hi there! I'm Kuntal, a passionate <strong>B.Tech</strong> student
+          👋 Hi there! I&apos;m Kuntal, a passionate <strong>B.Tech</strong> student
           in <strong>Computer Science and Engineering</strong> who loves{" "}
           <strong>web development</strong>.
         </p>
         <br />
         <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
-          I'm a Full Stack Engineer. I am 21 and learning{" "}
+          I&apos;m a Full Stack Engineer. I am 21 and learning{" "}
           <strong>
             TypeScript, Next.js, React.js, Node.js, and database management
           </strong>

@@ -1,7 +1,6 @@
 import Hero from "@/components/hero";
 import HomeAbout from "@/components/homeAbout";
 import HomeProject from "@/components/homeproject";
-import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (

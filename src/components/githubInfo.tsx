@@ -1,12 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Users, GitCommit, FolderGit, Star, UserCircle } from "lucide-react";
+import { Users, GitCommit, FolderGit, Star } from "lucide-react";
 
 interface GitHubStats {
   followers: number;
   commits: number;
   public_repos: number;
   stars: number;
+}
+
+interface GitHubRepo {
+  stargazers_count: number;
+  // Add other repo properties if needed
+  id: number;
+  name: string;
 }
 
 const GithubInfo = () => {
@@ -25,9 +32,9 @@ const GithubInfo = () => {
         const reposResponse = await fetch(
           "https://api.github.com/users/Kuntalmajee2557/repos"
         );
-        const reposData = await reposResponse.json();
+        const reposData: GitHubRepo[] = await reposResponse.json();
         const totalStars = reposData.reduce(
-          (acc: number, repo: any) => acc + repo.stargazers_count,
+          (acc: number, repo: GitHubRepo) => acc + repo.stargazers_count,
           0
         );
 

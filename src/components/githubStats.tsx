@@ -1,13 +1,19 @@
 'use client';
 import GitHubCalendar from 'react-github-calendar';
 
+interface Contribution {
+  date: string;
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
+}
+
 export const GithubStats = () => {
-  const selectLastTwoMonths = (contributions: any[]) => {
+  const selectLastTwoMonths = (contributions: Contribution[]) => {
     const today = new Date();
     const threeMonthsAgo = new Date();
     threeMonthsAgo.setMonth(today.getMonth() - 3);
     
-    return contributions.filter((day: any) => {
+    return contributions.filter((day: Contribution) => {
       return new Date(day.date) >= threeMonthsAgo;
     });
   };

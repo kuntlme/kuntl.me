@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhone, FaTwitter, FaCalendar } from "react-icons/fa";
+import { FaEnvelope, FaTwitter, FaCalendar } from "react-icons/fa";
 
 const page = () => {
   return (
@@ -9,7 +9,7 @@ const page = () => {
           Contact Me
         </h1>
         <p className="text-gray-300 border-l-4 border-stone-700 pl-4 mb-7">
-          I'm always looking for new opportunities to learn and grow. If you have
+          I&apos;m always looking for new opportunities to learn and grow. If you have
           any questions or would like to collaborate, please feel free to
           reach out.
         </p>
