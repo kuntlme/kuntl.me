@@ -19,7 +19,7 @@ export const GithubStats = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 text-gray-300 border border-slate-600 rounded-md w-auto">
+    <div className="flex flex-col items-center p-4 text-gray-300 border border-slate-600 rounded-md w-auto hover:border-cyan-400 hover:scale-105 duration-300">
       <GitHubCalendar 
         username="Kuntalmajee2557"
         colorScheme="dark"

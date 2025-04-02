@@ -53,7 +53,7 @@ const GithubInfo = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-1 justify-center items-center border border-slate-600 rounded-md">
+    <div className="flex flex-col gap-1 justify-center items-center border border-slate-600 rounded-md hover:border-cyan-400 hover:scale-105 duration-300">
       <div className="w-full justify-start items-start">
         <div className="flex justify-end items-center gap-2 w-2/3 bg-zinc-800 py-1 px-3 rounded-r-md">
           <Users className="w-5 h-5 text-gray-400" />

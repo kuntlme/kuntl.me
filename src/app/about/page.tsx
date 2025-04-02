@@ -7,13 +7,13 @@ const page = () => {
         <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
           About Me
         </h1>
-        <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
+        <p className="text-gray-300 border-l-4 border-zinc-700 pl-4">
           👋 Hi there! I&apos;m Kuntal, a passionate <strong>B.Tech</strong> student
           in <strong>Computer Science and Engineering</strong> who loves{" "}
           <strong>web development</strong>.
         </p>
         <br />
-        <p className="text-gray-300 border-l-4 border-stone-700 pl-4">
+        <p className="text-gray-300 border-l-4 border-zinc-700 pl-4">
           I&apos;m a Full Stack Engineer. I am 21 and learning{" "}
           <strong>
             TypeScript, Next.js, React.js, Node.js, and database management
@@ -21,7 +21,7 @@ const page = () => {
           . Now, I have a passion for learning UI/UX.
         </p>
         <br />
-        <p className="text-gray-300 mb-7 border-l-4 border-stone-700 pl-4">
+        <p className="text-gray-300 mb-7 border-l-4 border-zinc-700 pl-4">
           I love using <strong>Next.js</strong> to create a website. Then use <strong>GitHub</strong> to host my
           codebase. After that, I use <strong>Vercel</strong> to deploy my website.
         </p>

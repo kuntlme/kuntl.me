@@ -1,4 +1,5 @@
 import Card from '@/components/card'
+import { Project, projects } from '@/data/project'
 import React from 'react'
 
 const page = () => {
@@ -10,10 +11,11 @@ const page = () => {
         </h1>
 
         <div className='grid grid-cols-2 gap-4 mt-10'>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+          {
+            projects.map((project: Project) => (
+              <Card key={project.id} title={project.title} description={project.description} githubLink={project.githubLink} direcLink={project.direcLink} techStack={project.techStack} />
+            ))
+          }
         </div>
       </section>
     </div>
