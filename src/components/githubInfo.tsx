@@ -24,23 +24,40 @@ const GithubInfo = () => {
       try {
         // Fetch basic user info
         const userResponse = await fetch(
-          "https://api.github.com/users/Kuntalmajee2557"
+          "https://api.github.com/users/Kuntlme"
         );
         const userData = await userResponse.json();
 
         // Fetch repositories to calculate total stars
         const reposResponse = await fetch(
-          "https://api.github.com/users/Kuntalmajee2557/repos"
+          "https://api.github.com/users/Kuntlme/repos"
         );
         const reposData: GitHubRepo[] = await reposResponse.json();
-        const totalStars = reposData.reduce(
-          (acc: number, repo: GitHubRepo) => acc + repo.stargazers_count,
-          0
+        const totalStars = Array.isArray(reposData)
+          ? reposData.reduce(
+              (acc: number, repo: GitHubRepo) => acc + repo.stargazers_count,
+              0
+            )
+          : 0;
+
+        // Fetch user events to calculate total commits
+        const eventsResponse = await fetch(
+          "https://api.github.com/users/Kuntlme/events"
         );
+        const eventsData = await eventsResponse.json();
+        const totalCommits = Array.isArray(eventsData)
+          ? eventsData
+              .filter((event: any) => event.type === "PushEvent")
+              .reduce(
+                (acc: number, event: any) =>
+                  acc + event.payload.commits.length,
+                0
+              )
+          : 0;
 
         setStats({
           followers: userData.followers,
-          commits: 0,
+          commits: totalCommits,
           public_repos: userData.public_repos,
           stars: totalStars,
         });
