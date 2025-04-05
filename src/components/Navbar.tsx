@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
   return (
     <div className="fixed py-8 px-[35rem] w-full bg-zinc-900 text-md font-semibold text-white flex justify-between items-center z-50">
-      <div>logo</div>
+      <div className="text-2xl font-[Quicksand] text-white font-extrabold">Kuntl<span className="text-cyan-400">.me</span></div>
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-6 border border-stone-700 rounded-4xl px-6">
           <Link href="/" className={`${pathname == '/' ? "text-cyan-400 font-normal border-b border-cyan-600" : "text-white font-semibold"} cursor-pointer py-1`}>Home</Link>
