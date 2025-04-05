@@ -16,6 +16,13 @@ interface GitHubRepo {
   name: string;
 }
 
+interface GitHubEvent {
+  type: string;
+  payload: {
+    commits: { message: string }[];
+  };
+}
+
 const GithubInfo = () => {
   const [stats, setStats] = useState<GitHubStats | null>(null);
 
@@ -44,12 +51,12 @@ const GithubInfo = () => {
         const eventsResponse = await fetch(
           "https://api.github.com/users/Kuntlme/events"
         );
-        const eventsData = await eventsResponse.json();
+        const eventsData: GitHubEvent[] = await eventsResponse.json();
         const totalCommits = Array.isArray(eventsData)
           ? eventsData
-              .filter((event: any) => event.type === "PushEvent")
+              .filter((event: GitHubEvent) => event.type === "PushEvent")
               .reduce(
-                (acc: number, event: any) =>
+                (acc: number, event: GitHubEvent) =>
                   acc + event.payload.commits.length,
                 0
               )
