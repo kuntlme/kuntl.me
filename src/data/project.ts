@@ -46,6 +46,14 @@ export const projects: Project[] = [
     },
     {
         id: 3,
+        title: "Chess App",
+        description: "A chess application that allows users to play chess online with friends, featuring real-time multiplayer functionality, user authentication, and a sleek interface.",
+        githubLink: "https://github.com/kuntlme/chess-app",
+        direcLink: "",
+        techStack: ["React", "Tailwind CSS", "TypeScript", "Websocket"],
+    },
+    {
+        id: 3,
         title: "Portfolio",
         description: "A modern Next.js portfolio showcasing projects, skills, and experience with a responsive design, smooth navigation, and fast performance for an impressive presentation.",
         githubLink: "https://github.com/Kuntalmajee2557/kuntl.me",
