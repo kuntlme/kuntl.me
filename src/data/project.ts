@@ -53,7 +53,7 @@ export const projects: Project[] = [
         techStack: ["React", "Tailwind CSS", "TypeScript", "Websocket"],
     },
     {
-        id: 3,
+        id: 4,
         title: "Portfolio",
         description: "A modern Next.js portfolio showcasing projects, skills, and experience with a responsive design, smooth navigation, and fast performance for an impressive presentation.",
         githubLink: "https://github.com/Kuntalmajee2557/kuntl.me",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
         techStack: ["React", "Tailwind CSS"],
     },
     {
-        id: 4,
+        id: 5,
         title: "Currency Converter",
         description: "A simple React currency converter that provides real-time exchange rates, allowing users to convert between multiple currencies with a user-friendly interface.",
         githubLink: "https://github.com/Kuntalmajee2557/Currency-Converter",
