@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="mailto:kuntalmajee338@gmail.com" target="_blank">
           <Mail size={20} className="cursor-pointer hover:text-cyan-400 hover:scale-125 duration-300" />
           </a>
-          <a href="https://github.com/Kuntalmajee2557" target="_blank">
+          <a href="https://github.com/kuntlme" target="_blank">
           <Github size={20} className="cursor-pointer hover:text-cyan-400 hover:scale-125 duration-300" />
           </a>
           <a href="https://twitter.com/Kuntlmajee" target="_blank">
