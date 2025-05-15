@@ -9,7 +9,7 @@ interface Contribution {
 }
 
 export const GithubStats = () => {
-  const {theme, setTheme } = useTheme();
+  const {theme } = useTheme();
   const selectLastTwoMonths = (contributions: Contribution[]) => {
     const today = new Date();
     const startOfTwoMonthsAgo = new Date(today.getFullYear(), today.getMonth() - 2, 1);

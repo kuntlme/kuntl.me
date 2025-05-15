@@ -5,7 +5,6 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { BsMoonStarsFill } from "react-icons/bs";
 
 const Navbar = () => {
   const pathname = usePathname();
