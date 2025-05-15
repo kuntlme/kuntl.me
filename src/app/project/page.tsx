@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='bg-zinc-900 flex flex-col'>
+    <div className='bg-gray-200 dark:bg-zinc-900 flex flex-col'>
       <section className="container mt-30">
         <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
           My Projects

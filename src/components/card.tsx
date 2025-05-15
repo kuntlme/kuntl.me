@@ -17,7 +17,7 @@ const Card = ({
   techStack,
 }: CardProps) => {
   return (
-    <div className="border border-slate-600 hover:border-cyan-400 hover:scale-105 duration-300 px-5 py-10 rounded-lg text-white col-span-1">
+    <div className="border border-gray-400 dark:border-slate-600 hover:border-cyan-400 hover:scale-105 duration-300 px-5 py-10 rounded-lg text-zinc-700 dark:text-white col-span-1">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <h2 className="text-2xl font-bold">{title}</h2>
@@ -39,12 +39,12 @@ const Card = ({
           )}
         </div>
       </div>
-      <p className="text-gray-300 pt-5">{description}</p>
+      <p className="text-gray-500 dark:text-gray-300 pt-5">{description}</p>
       <div className="flex flex-wrap mt-2">
         {techStack.map((stack) => (
           <p
             key={stack}
-            className="leading-5 mb-2 border border-zinc-700 text-gray-300 rounded-md text-xs italic mr-2 px-1"
+            className="leading-5 mb-2 border border-zinc-300 dark:border-zinc-700 text-gray-500 dark:text-gray-300 rounded-md text-xs italic mr-2 px-1"
           >
             {stack}
           </p>
