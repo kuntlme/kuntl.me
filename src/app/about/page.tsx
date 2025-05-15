@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div className="bg-gray-200 dark:bg-zinc-900 flex flex-col">
       <section className="container mt-30">
-        <h1 className="mb-3 text-7xl text-stone-700 dark:text-white text-transparent text-outline font-bold">
+        <h1 className="mb-3 text-7xl dark:text-white text-transparent text-outline font-bold">
           About Me
         </h1>
         <p className="text-gray-300 border-l-4 border-zinc-700 pl-4">
