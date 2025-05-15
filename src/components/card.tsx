@@ -17,7 +17,7 @@ const Card = ({
   techStack,
 }: CardProps) => {
   return (
-    <div className="border border-gray-400 dark:border-slate-600 hover:border-cyan-400 hover:scale-105 duration-300 px-5 py-10 rounded-lg text-zinc-700 dark:text-white col-span-1">
+    <div className="border border-gray-400 dark:border-slate-600 hover:border-green-600 dark:hover:border-cyan-400 hover:scale-105 duration-300 px-5 py-10 rounded-lg text-zinc-700 dark:text-white col-span-1">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <h2 className="text-2xl font-bold">{title}</h2>
@@ -26,14 +26,14 @@ const Card = ({
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <Github
               size={20}
-              className="cursor-pointer hover:text-cyan-400  duration-300"
+              className="cursor-pointer hover:text-green-600 dark:hover:text-cyan-400  duration-300"
             />
           </a>
           {direcLink && (
             <a href={direcLink} target="_blank" rel="noopener noreferrer">
               <MoveUpRight
                 size={20}
-                className="cursor-pointer hover:text-cyan-400 hover:scale-125 duration-300"
+                className="cursor-pointer hover:text-green-600 dark:hover:text-cyan-400 hover:scale-125 duration-300"
               />
             </a>
           )}
