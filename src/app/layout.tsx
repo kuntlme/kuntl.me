@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/Navbar";
 import ThemeProviderComponent from "@/components/ThemeProviderComponent";
+import { ClientWrapper } from "@/components/ClientWrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ClientWrapper>
         <ThemeProviderComponent>
           <div className="flex flex-col min-h-screen bg-gray-200 dark:bg-zinc-900">
             <Navbar />
@@ -42,6 +44,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProviderComponent>
+        </ClientWrapper>
       </body>
     </html>
   );
