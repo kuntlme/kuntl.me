@@ -35,7 +35,7 @@
       <div className="flex flex-col items-center p-4 text-zinc-700 dark:text-gray-300 border border-zinc-400 dark:border-slate-600 rounded-md w-auto hover:border-green-600 dark:hover:border-cyan-400 hover:scale-105 duration-300">
         <GitHubCalendar
           username="kuntlme"
-          colorScheme={theme as 'dark' | 'light'}
+          colorScheme={ theme === "light" || theme === "dark" ? theme : "dark" }
           fontSize={16}
           blockSize={12}
           transformData={selectLastTwoMonths}

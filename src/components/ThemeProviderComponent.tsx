@@ -8,7 +8,7 @@ interface Props {
 
 const ThemeProviderComponent = ({children}: Props) => {
   return (
-    <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
         {children}  
     </ThemeProvider>
   )
