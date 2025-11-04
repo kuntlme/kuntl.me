@@ -20,7 +20,7 @@ const Navbar = () => {
     const mediaQuery = window.matchMedia("(prefers-color-shceme: dark)");
     setSystemTheme(mediaQuery.matches ? "dark" : "light");
 
-    const handleChange = (_: MediaQueryListEvent) => {
+    const handleChange = (/* _: MediaQueryListEvent */) => {
       setSystemTheme(mediaQuery.matches ? "dark" : "light");
     };
 
