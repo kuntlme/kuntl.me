@@ -31,25 +31,25 @@ const GithubInfo = () => {
       try {
         // Fetch basic user info
         const userResponse = await fetch(
-          "https://api.github.com/users/Kuntlme"
+          "https://api.github.com/users/Kuntlme",
         );
         const userData = await userResponse.json();
 
         // Fetch repositories to calculate total stars
         const reposResponse = await fetch(
-          "https://api.github.com/users/Kuntlme/repos"
+          "https://api.github.com/users/Kuntlme/repos",
         );
         const reposData: GitHubRepo[] = await reposResponse.json();
         const totalStars = Array.isArray(reposData)
           ? reposData.reduce(
               (acc: number, repo: GitHubRepo) => acc + repo.stargazers_count,
-              0
+              0,
             )
           : 0;
 
         // Fetch user events to calculate total commits
         const eventsResponse = await fetch(
-          "https://api.github.com/users/Kuntlme/events"
+          "https://api.github.com/users/Kuntlme/events",
         );
         const eventsData: GitHubEvent[] = await eventsResponse.json();
         const totalCommits = Array.isArray(eventsData)
@@ -58,7 +58,7 @@ const GithubInfo = () => {
               .reduce(
                 (acc: number, event: GitHubEvent) =>
                   acc + event.payload.commits.length,
-                0
+                0,
               )
           : 0;
 
@@ -108,7 +108,9 @@ const GithubInfo = () => {
       <div className="w-full flex justify-end items-start">
         <div className="flex justify-start items-center gap-2 w-2/3 bg-gray-300 dark:bg-zinc-800 py-1 px-3 rounded-l-md">
           <Star className="w-5 h-5 text-zinc-700 dark:text-gray-400" />
-          <span className="text-zinc-700 dark:text-gray-300">{stats?.stars || "..."} stars</span>
+          <span className="text-zinc-700 dark:text-gray-300">
+            {stats?.stars || "..."} stars
+          </span>
         </div>
       </div>
     </div>

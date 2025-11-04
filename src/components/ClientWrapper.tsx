@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -6,7 +6,7 @@ export function ClientWrapper({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  if(!theme){
+  if (!theme) {
     setTheme("dark");
   }
 

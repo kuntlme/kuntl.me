@@ -1,17 +1,17 @@
-"use client"
-import { ThemeProvider } from 'next-themes'
-import React from 'react'
+"use client";
+import { ThemeProvider } from "next-themes";
+import React from "react";
 
 interface Props {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const ThemeProviderComponent = ({children}: Props) => {
+const ThemeProviderComponent = ({ children }: Props) => {
   return (
-    <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
-        {children}  
+    <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+      {children}
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default ThemeProviderComponent
+export default ThemeProviderComponent;
