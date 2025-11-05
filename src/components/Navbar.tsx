@@ -134,61 +134,64 @@ const Navbar = () => {
     //     </div>
     //   </div>
     // </div>
-    <Container className="py-8">
-      <div className="w-full flex justify-between items-center">
-        <div className="leftItem flex justify-between items-center gap-0">
-          <Image
-            src={Logo}
-            width={30}
-            height={30}
-            alt="logo"
-            className="mr-2 rounded-lg"
-          />
-          <p className="text-2xl font-[Quicksand] text-white font-extrabold tracking-wide">
-            Kuntl
-            <span className="text-cyan-400 text-2xl font-semibold">.me</span>
-          </p>
+    <Container className="py-8 flex-row">
+      <div
+        className={cn(
+          "leftItem flex justify-between items-center gap-0",
+          "mx-0",
+        )}
+      >
+        <Image
+          src={Logo}
+          width={30}
+          height={30}
+          alt="logo"
+          className="mr-2 rounded-lg"
+        />
+        <p className="text-2xl font-[Quicksand] text-white font-extrabold tracking-wide">
+          Kuntl
+          <span className="text-cyan-400 text-2xl font-semibold">.me</span>
+        </p>
+      </div>
+      <div className="rightItem flex justify-between gap-1">
+        <div className="hidden md:flex justify-between items-center gap-6 border-stone-500 dark:border-stone-700 rounded-4xl px-6 py-1">
+          {Array.isArray(links) &&
+            links.map((link, idx) => (
+              <Link
+                key={idx}
+                href={link.href}
+                className={cn(
+                  "hover:scale-110 transition-all duration-300 ease-in-out relative",
+                  pathname === link.href
+                    ? "text-gray-500 dark:text-cyan-400 font-semibold"
+                    : "text-neutral-400 hover:text-neutral-200",
+                )}
+              >
+                {link.title}
+                {pathname === link.href && (
+                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-r from-transparent via-cyan-400 to-transparent h-px w-full" />
+                )}
+              </Link>
+            ))}
         </div>
-        <div className="rightItem flex justify-between gap-1">
-          <div className="flex justify-between items-center gap-6 border-stone-500 dark:border-stone-700 rounded-4xl px-6 py-1">
-            {Array.isArray(links) &&
-              links.map((link, idx) => (
-                <Link
-                  key={idx}
-                  href={link.href}
-                  className={cn(
-                    "hover:scale-110 transition-all duration-300 ease-in-out relative",
-                    pathname === link.href
-                      ? "text-gray-500 dark:text-cyan-400 font-semibold"
-                      : "text-neutral-400 hover:text-neutral-200",
-                  )}
-                >
-                  {link.title}
-                  {pathname === link.href && (
-                    <div className="absolute inset-x-0 bottom-0 bg-linear-to-r from-transparent via-cyan-400 to-transparent h-px w-full" />
-                  )}
-                </Link>
-              ))}
-          </div>
-          <button
-            className="cursor-pointer relative align-center text-2xl flex items-center justify-center border border-green-600 dark:border-cyan-400 rounded-2xl w-10 h-8"
-            onClick={SWITCH_THEME}
-          >
-            <Sun
-              size={15}
-              className="absolute text-green-600 scale-100 dark:scale-0 dark:rotate-180 transition-all duration-300 ease-in-out"
-            />
-            <Moon
-              size={15}
-              className="absolute dark:text-cyan-400 scale-0 dark:scale-100 transition-all duration-300 ease-in-out"
-            />
-            {/* {theme == "light" ? (
+        <button
+          className="cursor-pointer relative align-center text-2xl flex items-center justify-center border border-green-600 dark:border-cyan-400 rounded-2xl w-10 h-8"
+          onClick={SWITCH_THEME}
+        >
+          <Sun
+            size={15}
+            className="absolute text-green-600 scale-100 dark:scale-0 dark:rotate-180 transition-all duration-300 ease-in-out"
+          />
+          <Moon
+            size={15}
+            className="absolute dark:text-cyan-400 scale-0 dark:scale-100 transition-all duration-300 ease-in-out"
+          />
+          {/* {theme == "light" ? (
               <Sun size={15} className="text-green-600 dark:scale-0 scale-1 transition-all duration-300 ease-in-out"/>
             ) : (
               <Moon size={15} className="dark:text-cyan-400 scale-0 dark:scale-1 transition-all duration-300 ease-in-out"/>
             )} */}
-          </button>
-        </div>
+        </button>
       </div>
     </Container>
   );

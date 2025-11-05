@@ -4,10 +4,12 @@ import GithubInfo from "./githubInfo";
 import Techstack from "./techstack";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Container from "./container";
+import { cn } from "../../lib/utils";
 const homeAbout = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white mt-10 mb-5">
+    <Container className={cn("relative px-6")}>
+      <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white mt-10 mb-5 text-start w-full">
         About Me
       </h1>
       <div className="grid grid-cols-2 gap-4">
@@ -25,7 +27,21 @@ const homeAbout = () => {
           </p>
         </Link>
       </div>
-    </div>
+
+      <div
+        className={cn(
+          "absolute inset-y-0 left-0 h-full w-px",
+          "bg-neutral-500/50",
+        )}
+      />
+
+      <div
+        className={cn(
+          "absolute inset-y-0 right-0 h-full w-px",
+          "bg-neutral-500/50",
+        )}
+      />
+    </Container>
   );
 };
 

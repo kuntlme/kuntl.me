@@ -45,10 +45,24 @@ export default function RootLayout({
           <ThemeProviderComponent>
             <div
               className={cn(
-                "bg-gray-200 dark:bg-zinc-900 flex flex-col items-center w-full min-h-screen h-fit",
+                "bg-gray-200 dark:bg-zinc-900 flex flex-col justify-start items-center w-full min-h-screen h-fit",
               )}
             >
-              <Navbar />
+              <div className="relative w-full max-w-4xl">
+                <Navbar />
+                <div
+                  className={cn(
+                    "absolute inset-y-0 left-0 h-full w-px",
+                    "bg-linear-to-b from-transparent to-neutral-500/50",
+                  )}
+                />
+                <div
+                  className={cn(
+                    "absolute inset-y-0 right-0 h-full w-px",
+                    "bg-linear-to-b from-transparent to-neutral-500/50",
+                  )}
+                />
+              </div>
               {children}
               <Container className=" bottom-0 mt-40">
                 <Footer />
