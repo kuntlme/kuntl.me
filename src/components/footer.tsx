@@ -1,9 +1,11 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import React from "react";
+import Container from "./container";
+import { cn } from "../../lib/utils";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-200 dark:bg-zinc-900">
+    <Container className="relative bg-gray-200 dark:bg-zinc-900">
       <div className="container bg-gray-200 dark:bg-zinc-900 text-gray-200 w-full flex flex-col items-center justify-center gap-2 py-5">
         <div className="flex justify-center items-center gap-6 mb-2">
           <a href="mailto:kuntalmajee338@gmail.com" target="_blank">
@@ -45,8 +47,28 @@ const Footer = () => {
           </a>
         </div>
       </div>
+    </Container>
+  );
+};
+
+const FooterComponent = () => {
+  return (
+    <div className="relative w-full max-w-4xl">
+      <Footer />
+      <div
+        className={cn(
+          "absolute inset-y-0 left-0 h-full w-px opacity-20",
+          "bg-linear-to-b to-transparent from-neutral-500/50",
+        )}
+      />
+      <div
+        className={cn(
+          "absolute inset-y-0 right-0 h-full w-px opacity-20",
+          "bg-linear-to-b to-transparent from-neutral-500/50",
+        )}
+      />
     </div>
   );
 };
 
-export default Footer;
+export default FooterComponent;

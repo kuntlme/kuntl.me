@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 import { cn } from "../../lib/utils";
+import { LeftLine, RightLine } from "./lines";
 
 const Hero = () => {
   return (
@@ -64,7 +65,7 @@ const Hero = () => {
           Exploring new technologies and creating web experiences, while
           continuously learning and growing as a developer.
         </p>
-        <hr className="dark:border-zinc-700 w-1/2 " />
+        <hr className="dark:border-zinc-700 w-1/2 opacity-50" />
         <p className="text-md font-sans text-zinc-700 dark:text-zinc-400 mt-2">
           Find me on{" "}
           <a href="https://x.com/Kuntlmajee" target="_blank">
@@ -75,7 +76,7 @@ const Hero = () => {
           for tech updates.
         </p>
       </div>
-      <div className="hidden md:relative border rounded-sm w-20 h-25">
+      <div className="hidden md:relative md:block border rounded-sm w-20 h-25">
         <div className="absolute -bottom-2 -right-2 h-full w-full border-2 border-cyan-400"></div>
         <div className="absolute -top-2 -left-2 h-full w-full border-2 border-cyan-400"></div>
         <Image
@@ -85,20 +86,8 @@ const Hero = () => {
           className="rounded-sm object-cover"
         />
       </div>
-
-      <div
-        className={cn(
-          "absolute inset-y-0 left-0 h-full w-px",
-          "bg-neutral-500/50",
-        )}
-      />
-
-      <div
-        className={cn(
-          "absolute inset-y-0 right-0 h-full w-px",
-          "bg-neutral-500/50",
-        )}
-      />
+      <LeftLine />
+      <RightLine />
     </Container>
   );
 };

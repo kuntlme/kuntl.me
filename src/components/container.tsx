@@ -10,7 +10,7 @@ const Container = ({
   return (
     <div
       className={cn(
-        "lg:max-w-4xl mx-auto px-2 w-full flex flex-col justify-between items-center",
+        "md:max-w-4xl mx-auto px-2 w-full flex flex-col justify-between items-center",
         className,
       )}
     >

@@ -4,9 +4,12 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { homeProjects } from "@/data/project";
 import { Project } from "@/data/project";
+import Container from "./container";
+import { cn } from "../../lib/utils";
+import { LeftLine, RightLine } from "./lines";
 const HomeProject = () => {
   return (
-    <div className="">
+    <Container className="relative">
       <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white my-5">
         Projects
       </h1>
@@ -32,7 +35,9 @@ const HomeProject = () => {
           </p>
         </Link>
       </div>
-    </div>
+      <LeftLine />
+      <RightLine />
+    </Container>
   );
 };
 

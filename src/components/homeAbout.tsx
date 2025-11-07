@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Container from "./container";
 import { cn } from "../../lib/utils";
+import { LeftLine, RightLine } from "./lines";
 const homeAbout = () => {
   return (
     <Container className={cn("relative px-6")}>
@@ -27,20 +28,8 @@ const homeAbout = () => {
           </p>
         </Link>
       </div>
-
-      <div
-        className={cn(
-          "absolute inset-y-0 left-0 h-full w-px",
-          "bg-neutral-500/50",
-        )}
-      />
-
-      <div
-        className={cn(
-          "absolute inset-y-0 right-0 h-full w-px",
-          "bg-neutral-500/50",
-        )}
-      />
+      <LeftLine />
+      <RightLine />
     </Container>
   );
 };

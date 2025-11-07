@@ -68,6 +68,7 @@ const Navbar = () => {
       href: "/contact",
     },
   ];
+  const cvRedirectLink = "https://dub.sh/kuntlcv";
 
   return (
     // <div className="fixed py-8 px-[35rem] w-full bg-gray-200  dark:bg-zinc-900 text-md font-semibold text-white flex justify-center items-center z-50">
@@ -153,8 +154,8 @@ const Navbar = () => {
           <span className="text-cyan-400 text-2xl font-semibold">.me</span>
         </p>
       </div>
-      <div className="rightItem flex justify-between gap-1">
-        <div className="hidden md:flex justify-between items-center gap-6 border-stone-500 dark:border-stone-700 rounded-4xl px-6 py-1">
+      <div className="rightItem flex justify-between gap-6">
+        <div className=" hidden md:flex justify-between items-center gap-6 border-stone-500 dark:border-stone-700 rounded-4xl px-1 py-1">
           {Array.isArray(links) &&
             links.map((link, idx) => (
               <Link
@@ -174,6 +175,16 @@ const Navbar = () => {
               </Link>
             ))}
         </div>
+        <Link
+          href={cvRedirectLink}
+          className={cn(
+            "border flex justify-center items-center px-2 rounded-lg border-dotted border-neutral-500 text-md font-bold text-neutral-400",
+            "cursor-pointer hover:border-cyan-400 hover:text-cyan-200 hover:bg-cyan-700 transition-all duration-300 ease-in-out",
+            "",
+          )}
+        >
+          CV
+        </Link>
         <button
           className="cursor-pointer relative align-center text-2xl flex items-center justify-center border border-green-600 dark:border-cyan-400 rounded-2xl w-10 h-8"
           onClick={SWITCH_THEME}
@@ -197,4 +208,24 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const NavbarComponent = () => {
+  return (
+    <div className="relative w-full max-w-4xl">
+      <Navbar />
+      <div
+        className={cn(
+          "absolute inset-y-0 left-0 h-full w-px opacity-20",
+          "bg-linear-to-b from-transparent to-neutral-500/50",
+        )}
+      />
+      <div
+        className={cn(
+          "absolute inset-y-0 right-0 h-full w-px opacity-20",
+          "bg-linear-to-b from-transparent to-neutral-500/50",
+        )}
+      />
+    </div>
+  );
+};
+
+export default NavbarComponent;
