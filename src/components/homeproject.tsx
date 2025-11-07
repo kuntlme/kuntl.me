@@ -5,7 +5,6 @@ import Link from "next/link";
 import { homeProjects } from "@/data/project";
 import { Project } from "@/data/project";
 import Container from "./container";
-import { cn } from "../../lib/utils";
 import { LeftLine, RightLine } from "./lines";
 const HomeProject = () => {
   return (

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
-import { cn } from "../../lib/utils";
 import { LeftLine, RightLine } from "./lines";
 
 const Hero = () => {
