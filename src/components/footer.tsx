@@ -33,7 +33,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <hr className="border-zinc-400 dark:border-zinc-700 w-full " />
+        <hr className="border-zinc-400 dark:border-zinc-700 w-full" />
         <div className="w-full flex justify-between items-center">
           <p className="text-gray-500 dark:text-white">
             @2025 <span className="text-gray-400">--- </span>he
