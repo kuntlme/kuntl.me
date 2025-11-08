@@ -8,11 +8,11 @@ import Container from "./container";
 import { LeftLine, RightLine } from "./lines";
 const HomeProject = () => {
   return (
-    <Container className="relative">
-      <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white my-5">
+    <Container className="relative px-6 mb-10 sm:mb-24 sm:pb-4">
+      <h1 className="text-4xl text-center sm:text-start w-full font-extrabold text-gray-700 dark:text-white my-10">
         Projects
       </h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {homeProjects.map((project: Project) => (
           <Card
             key={project.id}

@@ -10,7 +10,7 @@ import { LeftLine, RightLine } from "./lines";
 const homeAbout = () => {
   return (
     <Container className={cn("relative px-6")}>
-      <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white mt-10 mb-5 text-start w-full">
+      <h1 className="text-4xl font-extrabold text-gray-700 dark:text-white mt-10 mb-5 text-center sm:text-start w-full">
         About Me
       </h1>
       <div className="grid grid-cols-2 gap-4">

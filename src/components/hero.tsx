@@ -5,7 +5,7 @@ import { LeftLine, RightLine } from "./lines";
 
 const Hero = () => {
   return (
-    <Container className="relative flex-row justify-center items-start py-20">
+    <Container className="relative flex-row justify-center items-start py-20 mt-20">
       {/*
       <div className="flex justify-between items-start pt-20">
         <div className="">
