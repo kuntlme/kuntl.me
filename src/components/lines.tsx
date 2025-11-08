@@ -1,12 +1,13 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 
-const VerticleLine = () => {
+const VerticleLine = ({ className }: { className: string }) => {
   return (
     <div
       className={cn(
-        "absolute inset-x-0 bottom-0 h-px w-full opacity-20",
+        "absolute inset-x-0 bottom-0 h-px w-full opacity-40",
         "bg-linear-to-r from-transparent via-neutral-500/50 to-transparent",
+        className,
       )}
     />
   );
