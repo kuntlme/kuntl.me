@@ -1,10 +1,13 @@
+import Container from "@/components/container";
+import { LeftLine, RightLine, VerticleLine } from "@/components/lines";
 import React from "react";
+import { cn } from "../../../lib/utils";
 
 const page = () => {
   return (
-    <div className="bg-gray-200 dark:bg-zinc-900 flex flex-col">
-      <section className="container mt-30">
-        <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
+    <div className={cn("relative w-full mx-auto pb-10 sm:pb-0")}>
+      <Container className="relative px-6 pt-32 sm:h-screen flex flex-col justify-start items-center">
+        <h1 className="mb-3 text-7xl text-start text-transparent text-outline font-bold w-full border">
           About Me
         </h1>
         <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4">
@@ -12,7 +15,6 @@ const page = () => {
           student in <strong>Computer Science and Engineering</strong> who loves{" "}
           <strong>web development</strong>.
         </p>
-        <br />
         <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4">
           I&apos;m a Full Stack Engineer. I am 21 and learning{" "}
           <strong>
@@ -20,7 +22,6 @@ const page = () => {
           </strong>
           . Now, I have a passion for learning UI/UX.
         </p>
-        <br />
         <p className="text-zinc-700 dark:text-gray-300 mb-7 border-l-4 border-zinc-400 dark:border-zinc-700  pl-4">
           I love using <strong>Next.js</strong> to create a website. Then use{" "}
           <strong>GitHub</strong> to host my codebase. After that, I use{" "}
@@ -86,7 +87,10 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+        <LeftLine />
+        <RightLine />
+      </Container>
+      <VerticleLine className="" />
     </div>
   );
 };
