@@ -1,5 +1,13 @@
 "use client";
-import { Sun } from "lucide-react";
+import {
+  CloudAlert,
+  Contact,
+  FileUser,
+  FlaskConical,
+  House,
+  LucideIcon,
+  Sun,
+} from "lucide-react";
 import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -9,6 +17,35 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Container from "./container";
 import { cn } from "../../lib/utils";
+
+interface Link {
+  title: string;
+  href: string;
+  icon: LucideIcon;
+}
+
+const links: Link[] = [
+  {
+    title: "Home",
+    href: "/",
+    icon: House,
+  },
+  {
+    title: "About",
+    href: "/about",
+    icon: FileUser,
+  },
+  {
+    title: "Project",
+    href: "/project",
+    icon: FlaskConical,
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    icon: Contact,
+  },
+];
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -50,92 +87,10 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  const links = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
-    {
-      title: "Project",
-      href: "/project",
-    },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
-  ];
   const cvRedirectLink = "https://dub.sh/kuntlcv";
 
   return (
-    // <div className="fixed py-8 px-[35rem] w-full bg-gray-200  dark:bg-zinc-900 text-md font-semibold text-white flex justify-center items-center z-50">
-    //   <Image src={Logo} width={20} height={10} alt="logo" className="mr-2" />
-    //   <div className="flex justify-between items-center gap-70">
-    //     <div className="text-2xl font-[Quicksand] text-gray-600 dark:text-white font-extrabold flex">
-    //       Kuntl<span className="text-green-600 dark:text-cyan-400">.me</span>
-    //     </div>
-    //     <div className="flex items-center gap-4">
-    //       <div className="flex items-center gap-6 border border-stone-500 dark:border-stone-700 rounded-4xl px-6">
-    //         <Link
-    //           href="/"
-    //           className={`${
-    //             pathname == "/"
-    //               ? "text-green-600 dark:text-cyan-400 font-normal border-b border-cyan-600"
-    //               : "text-gray-500 dark:text-white font-semibold"
-    //           } cursor-pointer py-1`}
-    //         >
-    //           Home
-    //         </Link>
-    //         <Link
-    //           href="/about"
-    //           className={`${
-    //             pathname == "/about"
-    //               ? "text-green-600 dark:text-cyan-400 font-normal border-b border-cyan-600"
-    //               : "text-gray-500 dark:text-white font-semibold"
-    //           } cursor-pointer py-1`}
-    //         >
-    //           About
-    //         </Link>
-    //         <Link
-    //           href="/project"
-    //           className={`${
-    //             pathname == "/project"
-    //               ? "text-green-600 dark:text-cyan-400 font-normal border-b border-cyan-600"
-    //               : "text-gray-500 dark:text-white font-semibold"
-    //           } cursor-pointer py-1`}
-    //         >
-    //           Project
-    //         </Link>
-    //         <Link
-    //           href="/contact"
-    //           className={`${
-    //             pathname == "/contact"
-    //               ? "text-green-600 dark:text-cyan-400 font-normal border-b border-cyan-600"
-    //               : "text-gray-500 dark:text-white font-semibold"
-    //           } cursor-pointer py-1`}
-    //         >
-    //           Contact
-    //         </Link>
-    //       </div>
-    //       <button
-    //         className="align-center text-2xl flex items-center justify-center border border-green-600 dark:border-cyan-400 rounded-2xl w-10 h-8"
-    //         onClick={() => {
-    //           setTheme(theme === "dark" ? "light" : "dark");
-    //         }}
-    //       >
-    //         {theme == "light" ? (
-    //           <Sun size={15} className="text-green-600" />
-    //         ) : (
-    //           <Moon size={15} className="text-cyan-400" />
-    //         )}
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-    <Container className="py-8 flex-row">
+    <Container className="relative py-8 flex-row fixed z-50 bg-zinc-900">
       <div
         className={cn(
           "leftItem flex justify-between items-center gap-0",
@@ -151,7 +106,7 @@ const Navbar = () => {
         />
         <p className="text-2xl font-[Quicksand] text-white font-extrabold tracking-wide">
           Kuntl
-          <span className="text-cyan-400 text-2xl font-semibold">.me</span>
+          <span className="text-cyan-400 text-2xl font-extrabold">.me</span>
         </p>
       </div>
       <div className="rightItem flex justify-between gap-6">
@@ -204,14 +159,6 @@ const Navbar = () => {
             )} */}
         </button>
       </div>
-    </Container>
-  );
-};
-
-const NavbarComponent = () => {
-  return (
-    <div className="relative w-full max-w-4xl">
-      <Navbar />
       <div
         className={cn(
           "absolute inset-y-0 left-0 h-full w-px opacity-20",
@@ -224,8 +171,42 @@ const NavbarComponent = () => {
           "bg-linear-to-b from-transparent to-neutral-500/50",
         )}
       />
+    </Container>
+  );
+};
+
+const MobileNavbar = () => {
+  const pathname = usePathname();
+  return (
+    <div className="sm:hidden flex justify-evenly inset-x-0 bottom-0 fixed bg-zinc-900 py-2 border-t border-zinc-800/70">
+      {Array.isArray(links) &&
+        links.map((link, idx) => {
+          const IconComponent = link.icon ?? CloudAlert;
+          return (
+            <Link
+              key={idx}
+              href={link.href}
+              className={cn(
+                "px-5 py-1 rounded-lg",
+                pathname === link.href
+                  ? "bg-cyan-600/20 border border-cyan-500"
+                  : "bg-zinc-800",
+              )}
+            >
+              <IconComponent
+                size={25}
+                className={cn(
+                  "",
+                  pathname === link.href
+                    ? "text-gray-500 dark:text-cyan-200 font-semibold"
+                    : "text-neutral-400 hover:text-neutral-200",
+                )}
+              />
+            </Link>
+          );
+        })}
     </div>
   );
 };
 
-export default NavbarComponent;
+export { Navbar, MobileNavbar };
