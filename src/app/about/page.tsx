@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className={cn("relative w-full mx-auto pb-10 sm:pb-0")}>
       <Container className="relative px-6 pt-32 sm:h-screen flex flex-col justify-start items-center">
-        <h1 className="mb-3 text-7xl text-start text-transparent text-outline font-bold w-full border">
+        <h1 className="mb-3 text-7xl text-center border sm:text-start text-transparent text-outline font-bold w-full border">
           About Me
         </h1>
         <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4">

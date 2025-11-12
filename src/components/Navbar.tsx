@@ -87,7 +87,6 @@ const Navbar = () => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  const cvRedirectLink = "https://dub.sh/kuntlcv";
 
   return (
     <Container className="relative py-8 flex-row fixed z-50 bg-zinc-900">
@@ -131,7 +130,7 @@ const Navbar = () => {
             ))}
         </div>
         <Link
-          href={cvRedirectLink}
+          href="/cv"
           className={cn(
             "border flex justify-center items-center px-2 rounded-lg border-dotted border-neutral-500 text-md font-bold text-neutral-400",
             "cursor-pointer hover:border-cyan-400 hover:text-cyan-200 hover:bg-cyan-700 transition-all duration-300 ease-in-out",

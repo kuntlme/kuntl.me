@@ -1,11 +1,13 @@
 import React from "react";
 import { FaEnvelope, FaTwitter, FaCalendar } from "react-icons/fa";
+import { cn } from "../../../lib/utils";
+import Container from "@/components/container";
 
 const page = () => {
   return (
-    <div className="bg-gray-200 dark:bg-zinc-900 flex flex-col">
-      <section className="container mt-30">
-        <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
+    <div className={cn("relative w-full mx-auto pb-60 sm:pb-0")}>
+      <Container className="relative px-6 pt-32 sm:h-screen flex flex-col justify-start items-center">
+        <h1 className="mb-3 text-7xl text-transparent text-outline font-bold w-full text-center sm:text-start">
           Contact Me
         </h1>
         <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4 mb-7">
@@ -13,7 +15,7 @@ const page = () => {
           you have any questions or would like to collaborate, please feel free
           to reach out.
         </p>
-        <div className="flex flex-col items-start gap-4 mb-8">
+        <div className="flex flex-col items-start gap-4 mb-8 w-full">
           <a
             href="mailto:kuntalmajee338@gmail.com"
             target="_blank"
@@ -45,7 +47,7 @@ const page = () => {
             </span>
           </a>
         </div>
-      </section>
+      </Container>
     </div>
   );
 };

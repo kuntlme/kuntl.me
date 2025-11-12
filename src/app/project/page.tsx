@@ -1,16 +1,19 @@
 import Card from "@/components/card";
 import { Project, projects } from "@/data/project";
 import React from "react";
+import { cn } from "../../../lib/utils";
+import Container from "@/components/container";
+import { LeftLine, RightLine, VerticleLine } from "@/components/lines";
 
 const page = () => {
   return (
-    <div className="bg-gray-200 dark:bg-zinc-900 flex flex-col">
-      <section className="container mt-30">
-        <h1 className="mb-3 text-7xl text-transparent text-outline font-bold">
+    <div className={cn("relative w-full mx-auto")}>
+      <Container className="relative px-6 pt-32 pb-10 sm:pb-32 flex flex-col justify-start items-center">
+        <h1 className="mb-3 text-7xl text-center sm:text-start text-transparent text-outline font-bold w-full">
           My Projects
         </h1>
 
-        <div className="grid grid-cols-2 gap-4 mt-10">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-10">
           {projects.map((project: Project) => (
             <Card
               key={project.id}
@@ -22,7 +25,10 @@ const page = () => {
             />
           ))}
         </div>
-      </section>
+        <LeftLine />
+        <RightLine />
+      </Container>
+      <VerticleLine className="" />
     </div>
   );
 };
