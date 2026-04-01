@@ -89,7 +89,7 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <Container className="relative py-8 flex-row fixed z-50 bg-zinc-900">
+    <Container className="py-8 flex-row fixed z-50 dark:bg-zinc-900 bg-gray-200">
       <div
         className={cn(
           "leftItem flex justify-between items-center gap-0",
@@ -103,9 +103,9 @@ const Navbar = () => {
           alt="logo"
           className="mr-2 rounded-lg"
         />
-        <p className="text-2xl font-[Quicksand] text-white font-extrabold tracking-wide">
+        <p className="text-2xl font-[Quicksand] dark:text-white text-gray-800/80 font-extrabold tracking-wide">
           Kuntl
-          <span className="text-cyan-400 text-2xl font-extrabold">.me</span>
+          <span className="dark:text-cyan-400 text-green-600 text-2xl font-extrabold">.me</span>
         </p>
       </div>
       <div className="rightItem flex justify-between gap-6">
@@ -118,13 +118,13 @@ const Navbar = () => {
                 className={cn(
                   "hover:scale-110 transition-all duration-300 ease-in-out relative",
                   pathname === link.href
-                    ? "text-gray-500 dark:text-cyan-400 font-semibold"
-                    : "text-neutral-400 hover:text-neutral-200",
+                    ? "text-green-500 dark:text-cyan-400 font-semibold"
+                    : "text-neutral-400 dark:hover:text-neutral-200 hover:text-neutral-600",
                 )}
               >
                 {link.title}
                 {pathname === link.href && (
-                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-r from-transparent via-cyan-400 to-transparent h-px w-full" />
+                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-r from-transparent dark:via-cyan-400 via-green-600 to-transparent h-px w-full" />
                 )}
               </Link>
             ))}
@@ -133,7 +133,7 @@ const Navbar = () => {
           href="/cv"
           className={cn(
             "border flex justify-center items-center px-2 rounded-lg border-dotted border-neutral-500 text-md font-bold text-neutral-400",
-            "cursor-pointer hover:border-cyan-400 hover:text-cyan-200 hover:bg-cyan-700 transition-all duration-300 ease-in-out",
+            "cursor-pointer dark:hover:border-cyan-400 hover:border-green-400 dark:hover:text-cyan-200 hover:text-green-200 dark:hover:bg-cyan-700 hover:bg-green-700 transition-all duration-300 ease-in-out",
             "",
           )}
         >
@@ -177,7 +177,7 @@ const Navbar = () => {
 const MobileNavbar = () => {
   const pathname = usePathname();
   return (
-    <div className="sm:hidden flex justify-evenly inset-x-0 bottom-0 fixed bg-zinc-900 py-2 border-t border-zinc-800/70">
+    <div className="sm:hidden flex justify-evenly inset-x-0 bottom-0 fixed dark:bg-zinc-900 bg-gray-200 py-2 border-t dark:border-zinc-800/70 border-zinc-500/20">
       {Array.isArray(links) &&
         links.map((link, idx) => {
           const IconComponent = link.icon ?? CloudAlert;
@@ -188,8 +188,8 @@ const MobileNavbar = () => {
               className={cn(
                 "px-5 py-1 rounded-lg",
                 pathname === link.href
-                  ? "bg-cyan-600/20 border border-cyan-500"
-                  : "bg-zinc-800",
+                  ? "dark:bg-cyan-600/20 bg-green-600/20 border dark:border-cyan-500 border-green-500"
+                  : "dark:bg-zinc-800 bg-zinc-300/60",
               )}
             >
               <IconComponent
@@ -197,8 +197,8 @@ const MobileNavbar = () => {
                 className={cn(
                   "",
                   pathname === link.href
-                    ? "text-gray-500 dark:text-cyan-200 font-semibold"
-                    : "text-neutral-400 hover:text-neutral-200",
+                    ? "text-green-500 dark:text-cyan-200 font-semibold"
+                    : "text-neutral-400 dark:hover:text-neutral-200 hover:text-neutral-500",
                 )}
               />
             </Link>

@@ -44,7 +44,7 @@ const Footer = () => {
                 key={idx}
                 href={link.href}
                 target="_blank"
-                className="group px-6 py-2 bg-cyan-300/10 sm:bg-none border-cyan-300/20 sm:border-none sm:p-2 sm:hover:bg-cyan-600/10 rounded-full transition-all ease-in-out duration-300"
+                className="group px-6 py-2 dark:bg-cyan-300/10 bg-green-300/10 sm:bg-none dark:border-cyan-300/20 border-green-300/20 sm:border-none sm:p-2 dark:sm:hover:bg-cyan-600/10 sm:hover:bg-green-600/10 rounded-full transition-all ease-in-out duration-300"
               >
                 <IconComponent
                   size={20}
@@ -83,7 +83,7 @@ const Footer = () => {
       <hr className="hidden sm:block border-zinc-400 dark:border-zinc-700 w-full opacity-40" />
       <div className="w-full flex px-5 sm:px-0 justify-between items-center">
         <p className="text-gray-500 dark:text-white">
-          @2025 <span className="text-gray-400">--- </span>he
+          @2026 <span className="text-gray-400">--- </span>he
           <span className="text-gray-400">/</span>him
         </p>
         <a href="https://github.com/Kuntalmajee2557/kuntl.me" target="_blank">

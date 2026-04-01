@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className={cn("relative w-full mx-auto pb-10 sm:pb-0")}>
       <Container className="relative px-6 pt-32 sm:h-screen flex flex-col justify-start items-center">
-        <h1 className="mb-3 text-7xl text-center border sm:text-start text-transparent text-outline font-bold w-full border">
+        <h1 className="mb-3 text-7xl text-center sm:text-start text-transparent text-outline font-bold w-full border">
           About Me
         </h1>
         <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4">
@@ -15,21 +15,34 @@ const page = () => {
           student in <strong>Computer Science and Engineering</strong> who loves{" "}
           <strong>web development</strong>.
         </p>
-        <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4">
-          I&apos;m a Full Stack Engineer. I am 21 and learning{" "}
-          <strong>
-            TypeScript, Next.js, React.js, Node.js, and database management
-          </strong>
-          . Now, I have a passion for learning UI/UX.
-        </p>
-        <p className="text-zinc-700 dark:text-gray-300 mb-7 border-l-4 border-zinc-400 dark:border-zinc-700  pl-4">
-          I love using <strong>Next.js</strong> to create a website. Then use{" "}
-          <strong>GitHub</strong> to host my codebase. After that, I use{" "}
-          <strong>Vercel</strong> to deploy my website.
+        <p className="text-zinc-700 dark:text-gray-300 border-l-4 border-zinc-400 dark:border-zinc-700 pl-4 mb-2 sm:mb-5">
+          I am a <strong>full-stack developer</strong> specializing in{" "}
+          <strong>Next.js</strong>, <strong>React</strong>,{" "}
+          <strong>Node.js</strong>, and <strong>TypeScript</strong>, with
+          experience building <strong>scalable backend systems</strong> and
+          real-time applications using <strong>WebSockets</strong>. Skilled in
+          developing and deploying modern web applications using{" "}
+          <strong>Docker</strong>, <strong>Kubernetes</strong> and cloud
+          infrastructure. Active <strong>open-source contributor</strong>{" "}
+          focused on performance, developer experience, and clean architecture.
         </p>
         <div className="flex flex-col">
           <div className="flex border-l-2 border-green-600 dark:border-cyan-400 gap-1">
             <div className="relative -left-3 top-0 w-6 h-6 bg-green-600 dark:bg-cyan-400 rounded-full"></div>
+            <div className="flex flex-col mb-5 w-11/12">
+              <h1 className="text-green-600 dark:text-cyan-400 text-2xl font-bold">
+                2026
+              </h1>
+              <p className="text-zinc-700 dark:text-gray-300">
+                Expanding into <strong>AI Engineering</strong> and <strong>Web3</strong>
+                , learning about <strong>System Design</strong>,{" "}
+                focusing on <strong>distributed system</strong> and its internal architecture.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex border-l-2 border-green-600 dark:border-cyan-400 gap-1">
+            <div className="relative -left-3 top-1 w-6 h-6 bg-green-600 dark:bg-cyan-400 rounded-full"></div>
             <div className="flex flex-col mb-5 w-11/12">
               <h1 className="text-green-600 dark:text-cyan-400 text-2xl font-bold">
                 2025

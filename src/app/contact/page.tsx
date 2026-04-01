@@ -27,9 +27,11 @@ const page = () => {
             href="https://twitter.com/Kuntlmajee"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-center gap-2 text-zinc-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-cyan-400 duration-300"
+            className="flex flex-col sm:flex-row justify-start sm:justify-center items-start sm:items-center gap-2 text-zinc-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-cyan-400 duration-300"
           >
+            <div className="flex justify-center items-center gap-2">
             <FaTwitter /> Kuntlmajee
+            </div>
             <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
               • Send me direct message and follow me for tech updates and
               development tips
