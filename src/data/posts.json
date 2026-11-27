@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Some Important thing need to know before deep dive into AI Development",
+    "slug": "things-to-know-before-deep-dive-into-ai-development",
+    "summary": "Some Important thing need to know before deep dive into AI Development",
+    "content": "## There have so many topics in AI.\nMostly are AI, ML, DL, NN, RAG, Agents, MCP and so many things.\nBut we have to decide `What I want to learn` before learning.\n\nThere are mostly two type of development in AI\n1. AI Research\n2. GenAI\n### Where I was wrong?\nWhen I wanted to learn AI I always go to the end line of ai means the first step of `AI Research`. Then I become frustated. \nI am a **full stack web developer**. So I want to build AI Integrated application. \nThen I realize I don't need to learn these much about LLM internals so deeply. I should learn about the optimization of usage of **LLM models, its memory, conext, sequrity**. \nIn `Object Oriented Programming` , I learned about **Abstruction**. And this is what the abstruction is.\nSo I just learn **high level design** of `how LLM works`.\n\nAlthough I am learning `Machine Learning`. But thats not for this. I am learning this out of curiosity.\n\nUntil now I learned about `different types of prompt`, ` internal tool calling` .",
+    "publishedAt": "2026-11-25",
+    "readingTime": 1,
+    "tags": [
+      "AI",
+      "GenAI"
+    ],
+    "published": true,
+    "featured": false
+  }
+]

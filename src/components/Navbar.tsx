@@ -11,7 +11,7 @@ import {
 import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import Logo from "@/app/favicon.ico";
+import Logo from "@/app/(site)/favicon.ico";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -39,6 +39,11 @@ const links: Link[] = [
     title: "Project",
     href: "/project",
     icon: FlaskConical,
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+    icon: CloudAlert,
   },
   {
     title: "Contact",
